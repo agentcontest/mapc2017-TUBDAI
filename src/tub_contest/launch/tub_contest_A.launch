@@ -1,0 +1,245 @@
+<launch>
+
+    <arg name="only_agent_specific"    default="true"/>
+
+    <!-- Enable custom logger configuration-->
+    <env name="ROS_PYTHON_LOG_CONFIG_FILE" value="$(find tub_contest)/launch/python_logging.conf"/>
+
+    <!--Infrastructure Nodes-->
+    <include file="$(find tub_contest)/launch/graphhopper.launch">
+        <arg name="initial_port" value="8770" />
+    </include>
+
+    <node pkg="knowledge_base" type="knowledge_base_node.py" name ="knowledgeBase_tub_contest" />
+
+
+    <!--Agent nodes-->
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA1" />
+        <!--The first bridge will always publish all general topics anyhow-->
+        <arg name="only_agent_specific" value="false" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA1" />
+    </include>
+
+    <!--Uncomment following blocks to use more than one agent-->
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA2" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA2" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA3" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA3" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA4" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA4" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA5" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA5" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA6" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA6" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA7" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA7" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA8" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA8" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA9" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA9" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA10" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA10" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA11" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA11" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA12" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA12" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA13" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA13" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA14" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA14" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA15" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA15" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA16" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA16" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA17" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA17" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA18" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA18" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA19" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA19" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA20" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA20" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA21" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA21" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA22" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA22" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA23" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA23" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA24" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA24" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA25" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA25" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA26" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA26" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA27" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA27" />
+    </include>
+
+    <include file="$(find mac_ros_bridge)/launch/mac_ros_bridge.launch">
+        <arg name="agent_name" value="agentA28" />
+        <arg name="only_agent_specific" value="$(arg only_agent_specific)" />
+    </include>
+    <include file="$(find tub_contest)/launch/rhbp_agent.launch">
+        <arg name="agent_name" value="agentA28" />
+    </include>
+
+</launch>

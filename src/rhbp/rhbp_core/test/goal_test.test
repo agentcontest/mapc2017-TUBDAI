@@ -1,0 +1,3 @@
+<launch>
+    <test pkg="rhbp_core" type="goal_test.py" test-name="TestGoalsNode"/>
+</launch>

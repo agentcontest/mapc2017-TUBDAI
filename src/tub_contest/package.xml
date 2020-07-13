@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<package>
+  <name>tub_contest</name>
+  <version>0.0.1</version>
+  <description>The TUB 2017 Multi-Agent Programming Contest Package </description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="christopher-eyk.hrabia@dai-labor.de">Christopher-Eky Hrabia</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>LGPLv3</license>
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/tub_contest</url> -->
+
+  <!-- Author tags are optional, mutiple are allowed, one per tag -->
+  <!-- Authors do not have to be maintianers, but could be -->
+  <author email="christopher-eyk.hrabia@dai-labor.de">Christopher-Eky Hrabia</author>
+  <author email="pat@my-lehmann.de">Patrick Marvin Lehmann</author>
+  <author email="axel.hessler@dai-labor.de">Axel Hessler</author>
+  <author email="nabil.badjuber@campus.tu-berlin.de">Nabil Battjbuer</author>
+
+  <!-- The *_depend tags are used to specify dependencies -->
+  <!-- Dependencies can be catkin packages or system dependencies -->
+  <!-- Examples: -->
+  <!-- Use build_depend for packages you need at compile time: -->
+  <!--   <build_depend>message_generation</build_depend> -->
+  <!-- Use buildtool_depend for build tool packages: -->
+  <!--   <buildtool_depend>catkin</buildtool_depend> -->
+  <!-- Use run_depend for packages you need at runtime: -->
+  <!--   <run_depend>message_runtime</run_depend> -->
+  <!-- Use test_depend for packages you need only for testing: -->
+  <!--   <test_depend>gtest</test_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>rhbp_core</build_depend>
+  <build_depend>rhbp_utils</build_depend>
+  <build_depend>mac_ros_bridge</build_depend>
+  <build_depend>mac_rhbp_example</build_depend>
+  <build_depend>diagnostic_msgs</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>rhbp_core</run_depend>
+  <run_depend>rhbp_utils</run_depend>
+  <run_depend>mac_ros_bridge</run_depend>
+  <run_depend>mac_rhbp_example</run_depend>
+  <run_depend>diagnostic_msgs</run_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
